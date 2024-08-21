@@ -16,6 +16,8 @@ services:
     privileged: true
     depends_on:
       - postgres
+    networks:
+      - app-network
 
   postgres:
     image: postgres:16.3
@@ -25,4 +27,6 @@ services:
       - POSTGRES_PASSWORD=petclinic
       - POSTGRES_USER=petclinic
       - POSTGRES_DB=petclinic
+    networks:
+      - app-network
 
