@@ -28,7 +28,3 @@ services:
       - POSTGRES_USER=petclinic
       - POSTGRES_DB=petclinic
 
-networks:
-  default:
-    external:
-      name: bridge
